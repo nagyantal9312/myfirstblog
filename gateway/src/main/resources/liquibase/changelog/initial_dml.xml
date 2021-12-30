@@ -13,6 +13,23 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
                 usePreparedStatements="true">
             <column name="name" type="string"/>
         </loadData>
+        <loadData
+                file="liquibase/data/user.csv"
+                separator=";"
+                tableName="user"
+                usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="activated" type="boolean"/>
+            <column name="created_date" type="timestamp"/>
+        </loadData>
+        <loadData
+                file="liquibase/data/user_authority.csv"
+                separator=";"
+                tableName="user_authority"
+                usePreparedStatements="true">
+            <column name="user_id" type="numeric"/>
+        </loadData>
+
     </changeSet>
 
 </databaseChangeLog>

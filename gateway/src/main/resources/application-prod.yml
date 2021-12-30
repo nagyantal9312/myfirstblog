@@ -1,2 +1,22 @@
 server:
   port: 8083
+
+spring:
+#  datasource:
+#    url: "jdbc:postgresql://localhost:5432/myfirstblog"
+#    username: "postgres"
+#    password: "root"
+
+  liquibase:
+    change-log: "liquibase/master.xml"
+    url: jdbc:postgresql://localhost:5432/gateway
+    user: postgres
+    password: root
+    enabled: true
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/gateway
+    username: postgres
+    password: root
+
+
