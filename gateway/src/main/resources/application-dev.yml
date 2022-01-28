@@ -16,3 +16,11 @@ spring:
     url: r2dbc:h2:mem:///gateway;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     username: test
     password:
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+
+h2-server:
+  port: 8092
